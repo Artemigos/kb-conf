@@ -1,0 +1,11 @@
+{
+    "TOP1": "SUPER+N1",
+    "TOP2": "SUPER+N2",
+    "TOP3": "SUPER+N3",
+    "BOTTOM1": "SUPER+N4",
+    "BOTTOM2": "SUPER+N5",
+    "BOTTOM3": "MOUSE_LEFT",
+    "ENC_CCW": "MEDIA_VOL_DEC",
+    "ENC_CW": "MEDIA_VOL_INC",
+    "ENC_CLICK": "MEDIA_PLAY_PAUSE"
+}
