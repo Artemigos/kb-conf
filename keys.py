@@ -136,4 +136,10 @@ class MediaKeys:
     VOL_INC: MediaKey = 233
     VOL_DEC: MediaKey = 234
 
-Key = BasicKey | MediaKey
+MouseKey = int
+class MouseKeys:
+    LEFT: MouseKey = 1
+    RIGHT: MouseKey = 2
+    MIDDLE: MouseKey = 4
+    WHEEL_UP: MouseKey = 254 # dummy, actually 0
+    WHEEL_DOWN: MouseKey = 255 # dummy, actually 0

@@ -1,14 +1,12 @@
-from .commands import BaseCommand, KeyChainCommand, KeyChord, MediaKeyCommand, persistCommand
+from .commands import BaseCommand, KeyChainCommand, KeyChord, MediaKeyCommand, MouseCommand, persistCommand
 from .hid import Device, enumerate
-from .keys import ProgrammedKey, MediaKey
+from .keys import FuncKey, MouseKey, ProgrammedKey, MediaKey
 
 VID = 0x1189
 PID = 0x8890
 PROGRAM_REPORT_ID = 3
 
-# TODO: add mouse actions
 # TODO: check if LED needs to be done or can be ignored
-# TODO: check if the delay feature is actually useless or not
 # TODO: load layout from json
 # TODO: windows support
 
@@ -35,6 +33,9 @@ class ProgDevice(Device):
 
     def program_media_key(self, programmed_key: ProgrammedKey, key: MediaKey):
         self.write_command(MediaKeyCommand(programmed_key, key))
+
+    def program_mouse_key(self, programmed_key: ProgrammedKey, func_key: FuncKey, mouse_key: MouseKey):
+        self.write_command(MouseCommand(programmed_key, func_key, mouse_key))
 
     def persist_keys(self):
         self.write_command(persistCommand)
