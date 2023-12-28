@@ -15,15 +15,15 @@ PROGRAM_REPORT_ID = 3
 
 ProgrammedKey = int
 class ProgrammedKeys:
-    BOTTOM_LEFT: ProgrammedKey = 1
-    MIDDLE_LEFT: ProgrammedKey = 2
-    TOP_LEFT: ProgrammedKey = 3
-    BOTTOM_RIGHT: ProgrammedKey = 4
-    MIDDLE_RIGHT: ProgrammedKey = 5
-    TOP_RIGHT: ProgrammedKey = 6
-    KNOB_LEFT: ProgrammedKey = 13
-    KNOB_CLICK: ProgrammedKey = 14
-    KNOB_RIGHT: ProgrammedKey = 15
+    TOP1: ProgrammedKey = 1
+    TOP2: ProgrammedKey = 2
+    TOP3: ProgrammedKey = 3
+    BOTTOM1: ProgrammedKey = 4
+    BOTTOM2: ProgrammedKey = 5
+    BOTTOM3: ProgrammedKey = 6
+    ENC_CCW: ProgrammedKey = 13
+    ENC_CLICK: ProgrammedKey = 14
+    ENC_CW: ProgrammedKey = 15
 
 KeyType = int
 class KeyTypes:
