@@ -12,7 +12,7 @@ def program_from_json(path: str, persist=True):
             dev.persist_keys()
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Utility for programming that one keyboard we bought.')
+    parser = argparse.ArgumentParser(description='Utility for a programmable keyboard VID:PID == 1189:8890')
     parser.add_argument('--spec-file', '-f', type=str, help='JSON file with key assignments')
     parser.add_argument(
         '--test',
