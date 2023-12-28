@@ -3,8 +3,6 @@ import argparse
 from .prog_device import ProgDevice
 from .serde import from_file, read_json_layout
 
-# TODO: windows support
-
 def program_from_json(path: str, persist=True):
     commands = read_json_layout(from_file(path))
     with ProgDevice.find() as dev:
@@ -28,7 +26,7 @@ if __name__ == '__main__':
         help='Use to persist the changes on the keyboard')
     args = parser.parse_args()
 
-    if args.test is None and args.spec_file is None:
+    if not args.test and args.spec_file is None:
         print('At least one of --test or --spec-file is required')
         parser.exit(1)
 

@@ -1,12 +1,18 @@
 import ctypes
 import atexit
+from os.path import dirname, join
 
 __all__ = ['HIDException', 'DeviceInfo', 'Device', 'enumerate']
 
+here = dirname(__file__)
 
 library_paths = (
     'libhidapi-libusb.so',
     'libhidapi-libusb.so.0',
+    join(here, 'hidapi.dll'),
+    join(here, 'libhidapi-0.dll'),
+    'hidapi.dll',
+    'libhidapi-0.dll',
 )
 
 for lib in library_paths:
