@@ -1,6 +1,11 @@
 from .prog_device import ProgDevice
 from .keys import ProgrammedKeys, BasicKeys, FuncKeys, MediaKeys, MouseKeys
 
+# TODO: check if LED needs to be done or can be ignored
+# TODO: load layout from json
+# TODO: windows support
+# TODO: CLI API
+
 def reset(dev: ProgDevice):
     dev.program_key(ProgrammedKeys.TOP1, (FuncKeys.NONE, BasicKeys.C))
     dev.program_key(ProgrammedKeys.TOP2, (FuncKeys.NONE, BasicKeys.C))

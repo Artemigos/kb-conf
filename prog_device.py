@@ -6,10 +6,6 @@ VID = 0x1189
 PID = 0x8890
 PROGRAM_REPORT_ID = 3
 
-# TODO: check if LED needs to be done or can be ignored
-# TODO: load layout from json
-# TODO: windows support
-
 class ProgDevice(Device):
     @staticmethod
     def find():
